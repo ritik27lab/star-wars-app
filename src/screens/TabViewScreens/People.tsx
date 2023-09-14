@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import { View, Text, FlatList, StyleSheet, ScrollView } from "react-native";
 import FastImage from "react-native-fast-image";
 import axios from "axios";
 
@@ -70,30 +70,41 @@ export const People = () => {
     };
 
     return (
-        <View style={{ flex: 1, backgroundColor: "#fff" }}>
-            <Text
-                style={styles.heading}
-            >
-                Popular Characters
-            </Text>
-            <FlatList
-                horizontal
-                data={peopleData}
-                renderItem={(item) => renderCharacter(item)}
-                showsHorizontalScrollIndicator={false}
-            />
-            <Text
-                style={styles.heading}
-            >
-                All Characters
-            </Text>
-            <FlatList
-                horizontal
-                data={peopleData}
-                renderItem={(item) => renderCharacter(item)}
-                showsHorizontalScrollIndicator={false}
-            />
-        </View>
+        <ScrollView
+            style={{
+                backgroundColor: "#FFFFFF",
+                flex: 1,
+                // height: "100%",
+
+
+            }}
+            showsVerticalScrollIndicator={false}
+        >
+            <View style={{ flex: 1, backgroundColor: "#fff" }}>
+                <Text
+                    style={styles.heading}
+                >
+                    Popular Characters
+                </Text>
+                <FlatList
+                    horizontal
+                    data={peopleData}
+                    renderItem={(item) => renderCharacter(item)}
+                    showsHorizontalScrollIndicator={false}
+                />
+                <Text
+                    style={styles.heading}
+                >
+                    All Characters
+                </Text>
+                <FlatList
+                    horizontal
+                    data={peopleData}
+                    renderItem={(item) => renderCharacter(item)}
+                    showsHorizontalScrollIndicator={false}
+                />
+            </View>
+        </ScrollView>
     );
 };
 
