@@ -39,7 +39,7 @@ export const Dashboard = () => {
             <View
                 style={{
                     backgroundColor: "#181818",
-                    height: Platform.OS == "ios" ? 220 : 200,
+                    height: Platform.OS == "ios" ? 220 : 160,
                     flex: 1,
                 }}
             >
@@ -50,7 +50,7 @@ export const Dashboard = () => {
                             justifyContent: "space-between",
                             width: "90%",
                             alignSelf: "center",
-                            marginTop: 65,
+                            marginTop: Platform.OS == 'ios'? 65: 35,
                         }}
                     >
                         <StarWarsImage />
@@ -59,7 +59,7 @@ export const Dashboard = () => {
                     <View style={styles.searchContainer}>
                         <TextInput
                             style={styles.input}
-                            placeholder="Search charachters"
+                            placeholder="Search characters"
                             placeholderTextColor="#A4A9B5"
                         />
                         <Ionicons name="search" size={20} color="#A4A9B5" />
