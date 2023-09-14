@@ -93,7 +93,7 @@ export const People = () => {
                     showsHorizontalScrollIndicator={false}
                 />
                 <Text
-                    style={styles.heading}
+                    style={[styles.heading, { position: 'absolute', marginTop: 300 }]}
                 >
                     All Characters
                 </Text>
@@ -102,6 +102,7 @@ export const People = () => {
                     data={peopleData}
                     renderItem={(item) => renderCharacter(item)}
                     showsHorizontalScrollIndicator={false}
+                    style={{ marginTop: 60 }}
                 />
             </View>
         </ScrollView>
