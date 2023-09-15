@@ -10,11 +10,8 @@ import { LoginPage } from "../screens/LoginPage";
 export const StackNavigator = (navigation) => {
   const Stack = createNativeStackNavigator();
 
-
-  console.log("After Login Data");
-
   const initialRoute =
-    "Dashboard";
+    "LoginPage";
 
   return (
     <Stack.Navigator

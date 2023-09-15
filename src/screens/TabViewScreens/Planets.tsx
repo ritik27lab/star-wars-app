@@ -7,7 +7,7 @@ import axios from "axios";
 import { MenuIcon } from "../assets/svg";
 export const Planets = () => {
 
-const [ planetsData, setPlanetsData ] = useState()
+    const [planetsData, setPlanetsData] = useState()
 
     useEffect(() => {
         axios
@@ -22,7 +22,7 @@ const [ planetsData, setPlanetsData ] = useState()
 
 
 
-    
+
     const PlanetCard = (item: any) => {
         return (
             <View style={{ marginLeft: 10, marginVertical: 15 }}>
@@ -41,15 +41,14 @@ const [ planetsData, setPlanetsData ] = useState()
                             </Text>
 
                         </View> */}
-                        <TouchableOpacity style={{alignSelf: 'flex-end'}} onPress={() => console.log('YESS')}>
+                        <TouchableOpacity style={{ alignSelf: 'flex-end' }} onPress={() => console.log('YESS')}>
                             <MenuIcon /></TouchableOpacity>
                     </View>
                 </FastImage>
 
                 <Text style={styles.title}>{item.item.name}</Text>
                 <Text numberOfLines={3} style={[styles.subTitle, { fontSize: 14 }]}>
-                    {/* {item.item.opening_crawl} */}
-                    The planet is inhabited by {item.item.population} creatures . The terrain is {item.item.terrain }. With orbital period of  {item.item.orbital_period}  of around its local star.
+                    The planet is inhabited by {item.item.population} creatures . The terrain is {item.item.terrain}. With orbital period of {item.item.orbital_period} of around its local star.
                 </Text>
                 <Text
                     numberOfLines={2}
@@ -64,7 +63,7 @@ const [ planetsData, setPlanetsData ] = useState()
 
 
     return (
-        <View style={{backgroundColor: '#fff', flex:1}}>
+        <View style={{ backgroundColor: '#fff', flex: 1 }}>
             {/* <Text>Planets Screen</Text> */}
             <FlatList
                 data={planetsData}

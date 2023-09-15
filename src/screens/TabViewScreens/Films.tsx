@@ -13,7 +13,7 @@ export const Films = () => {
             .get("https://swapi.dev/api/films/")
             .then((response) => {
                 setFilmsData(response.data.results);
-                console.log("response", response.data.results);
+                // console.log("response", response.data.results);
 
                 // setHomeTown()
             })
